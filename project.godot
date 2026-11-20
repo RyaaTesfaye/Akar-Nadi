@@ -11,6 +11,7 @@ config_version=5
 [application]
 
 config/name="Akar Nadi"
+run/main_scene="uid://bkrd2sytsfpsi"
 config/features=PackedStringArray("4.4", "GL Compatibility")
 config/icon="res://icon.svg"
 
