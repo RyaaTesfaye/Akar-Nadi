@@ -1,5 +1,7 @@
 [gd_scene format=3 uid="uid://c5vro1335wcor"]
 
+[ext_resource type="Script" uid="uid://dcmpbibf25wa6" path="res://scripts/ui/main_menu.gd" id="1_sl1te"]
+
 [node name="MainMenu" type="Control" unique_id=1492781852]
 layout_mode = 3
 anchors_preset = 15
@@ -7,3 +9,90 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_sl1te")
+
+[node name="Background" type="ColorRect" parent="." unique_id=1030391278]
+modulate = Color(0.14117648, 0.24313726, 0.16470589, 1)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=362339538]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 40
+theme_override_constants/margin_top = 40
+theme_override_constants/margin_right = 40
+theme_override_constants/margin_bottom = 40
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=1712915147]
+layout_mode = 2
+
+[node name="TitleLabel" type="Label" parent="MarginContainer/VBoxContainer" unique_id=1470513545]
+layout_mode = 2
+theme_override_font_sizes/font_size = 64
+text = "Akar Nadi"
+horizontal_alignment = 1
+
+[node name="ButtonContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=2131126423]
+layout_mode = 2
+theme_override_constants/separation = 15
+
+[node name="PlayButton" type="Button" parent="MarginContainer/VBoxContainer/ButtonContainer" unique_id=1202193727]
+layout_mode = 2
+text = "PLAY"
+
+[node name="SettingsButton" type="Button" parent="MarginContainer/VBoxContainer/ButtonContainer" unique_id=1794279986]
+layout_mode = 2
+text = "SETTING"
+
+[node name="QuitButton" type="Button" parent="MarginContainer/VBoxContainer/ButtonContainer" unique_id=2014401959]
+layout_mode = 2
+text = "QUIT"
+
+[node name="SettingsPanel" type="Panel" parent="." unique_id=622814620]
+visible = false
+custom_minimum_size = Vector2(400, 250)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="SettingsPanel" unique_id=597643741]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="Label" type="Label" parent="SettingsPanel/VBoxContainer" unique_id=1847558217]
+layout_mode = 2
+text = "VOLUME AUDIO"
+horizontal_alignment = 1
+
+[node name="VolumeSlider" type="HSlider" parent="SettingsPanel/VBoxContainer" unique_id=1968412219]
+layout_mode = 2
+max_value = 1.0
+step = 0.05
+value = 1.0
+
+[node name="CloseSettingsButton" type="Button" parent="SettingsPanel/VBoxContainer" unique_id=1313430336]
+layout_mode = 2
+text = "KEMBALI"
